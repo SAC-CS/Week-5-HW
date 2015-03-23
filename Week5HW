@@ -1,0 +1,54 @@
+// Thuc Pham
+// Week 5 Homework
+
+import javax.swing.JOptionPane;
+
+public class HW5
+
+{
+	public static void main(String[] args)
+{
+		int computerNum;
+		int player;
+		int gameNumber = 1;
+		int goodGuesses = 1;
+		int badGuesses = 1;
+		String userInputUpperCase ="";
+		do
+		{
+			JOptionPane.showMessageDialog(null, "Game Number: " + gameNumber); gameNumber++;
+			
+		computerNum = 0 + (int)( Math.random() * 10);
+		
+		String playerinput = 
+						JOptionPane.showInputDialog( "Enter a number between 1-10: ");
+		
+
+		player = Integer.parseInt(playerinput);
+				
+		if (computerNum == player)
+		{
+			JOptionPane.showMessageDialog(null, "Player Win!\n");
+			JOptionPane.showMessageDialog(null, "Good Guesses: " + goodGuesses); goodGuesses++;
+		}
+		
+		if (computerNum != player)
+			{
+			JOptionPane.showMessageDialog(null, "Player Lose!\n");
+			JOptionPane.showMessageDialog(null, "Bad Guesses: " + badGuesses); badGuesses++;
+			}
+			
+		
+			String message = 
+				String.format( "Random number is %d \n\n", computerNum );
+				JOptionPane.showMessageDialog(null,message);
+		
+			String playeranswer =JOptionPane.showInputDialog( "Do you want to play again? ");
+			userInputUpperCase = playeranswer.toUpperCase();
+		
+		}
+		
+		while ((userInputUpperCase.equals("YES")));
+		JOptionPane.showMessageDialog(null, "Good Bye!");	
+}
+}
