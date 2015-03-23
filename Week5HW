@@ -52,3 +52,6 @@ public class HW5
 		JOptionPane.showMessageDialog(null, "Good Bye!");	
 }
 }
+
+// 1. Please integrate GitHub with Eclipse so that the Jave project is stored correctly in GitHub
+// 2. Each game, user win = uw, computer win = cw.  Percentage = uw/cw
